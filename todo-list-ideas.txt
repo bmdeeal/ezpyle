@@ -1,0 +1,23 @@
+TODO and ideas list:
+* have the help use the same code as ls does
+* add an options command (display width, lines to show, etc)
+* maybe a few additons so it'd be useful for programming? dunno
+	- at the absolute least, maybe autoindent?
+	- writing Python with ezpyle is awful and it doesn't have to be
+	- or code in general, but Python is the worst affected
+* some kind of tab width config
+* some way to clear the screen
+	- even if it's just like, spewing a bunch of blank lines
+	- there'd really be a way to configure how to clear/how much to clear
+	- like, I doubt this will be used on an actual real TTY, but...
+	- seriously, it gets really messy
+* set up the parser to read in any passed arguments
+	- this is really easy, just split on space
+	- and we just check [0], and if [1] exists, use that, etc, etc
+	- half tempted to not do this, I've typed commands on the wrong prompt
+	- only accepting specifics has been a real life-saver
+* autoindent
+	- literally just look at the last line's indentation and copy it
+	- maybe add a command to indent/unindent a line
+	- also, ezpyle should probably replace tabs with spaces during display
+	- at the very least, make that configurable
