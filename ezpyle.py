@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-#I think this expects 3.7 or better, or at least that's what I wrote it on
+#Works on at least Python 3.6 from what I've tried, although most testing
+#has been done on Python 3.7.
 import sys
 import os
 
@@ -9,7 +10,7 @@ import os
 #2.9 will always be earlier than 2.10
 ezpyle_major_version=2
 ezpyle_minor_version=0
-ezpyle_extra_version="beta 5"
+ezpyle_extra_version="beta 6"
 ezpyle_version=f"v{ezpyle_major_version}.{ezpyle_minor_version}-{ezpyle_extra_version}"
 
 """
@@ -274,7 +275,7 @@ def main():
 	#show intro, clear file data
 	c_file.clear()
 	print(f"Welcome to ezpyle {ezpyle_version}.")
-	print("(C) 2021 B.M.Deeal.")
+	print("(C) 2021, 2022 B.M.Deeal.")
 	print("Type ? for help.")
 	#load a file passed on the command line
 	#TODO: any kind of real argument handling
@@ -311,14 +312,12 @@ def cmd_replace(thisline):
 	Text replace command.
 	Currently only replaces the first found on the line.
 	Doesn't search the whole file, only the current line.
-	(both are TODO, naturally)
+	(both are TODO, naturally -- might be added to a different command)
 	"""
 	#bounds check
 	if thisline<0:
 		print("Nothing to replace.")
 		return
-	print("warning: command is in beta!") #TODO: finish me
-	print("ezpyle currently only replaces the first instance found.")
 	#ask for what to replace
 	print("Replacing in line:")
 	print(f"{thisline+1}* {c_file.data[thisline]}") #TODO: this should be a method of c_file, need to refactor there
